@@ -932,11 +932,11 @@ void test_h_householder_qr() {
         h_strip_R_from_A((float*)A_out, R, m, n);
 
         float backward_error = h_backward_error((float*)A_in, R, Q, m, n);
-	float error3 = h_error_3(R, m, n);
+    float error3 = h_error_3(R, m, n);
         printf("||A - QR||/||A|| = %e\n", backward_error);
         printf("||QT @ Q - Im|| = %e\n", h_error_2(Q, m));
         printf("||L|| = %e\n", error3);
-	printf("Sequential householder QR finished...\n");
+    printf("Sequential householder QR finished...\n");
 
 
         // TASK15 duplicate: write results to log file
@@ -1116,7 +1116,7 @@ void test_dev_block_qr() {
 }
 
 int main() {
-//	std::out<< "testing" << endl;
+//  std::out<< "testing" << endl;
     test_dev_householder_qr();
     test_h_mmult();
     test_h_mmult_transpose_A();
